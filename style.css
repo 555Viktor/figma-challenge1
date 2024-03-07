@@ -1,0 +1,129 @@
+/* Body & layout (Desktop size)*/
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.left-side,
+.right-side{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+/* Left side background */
+
+.left-side{
+    position: relative;
+    background: url(./assets/69fbc1ae0c1f3d70d74daf58eef9535f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left-side::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(82, 0, 255, 0.65);
+}
+/* Left side text */
+
+.left-side .content{
+    height: 14.93rem;
+    width: 26.43rem;
+    z-index: 1;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+.left-side h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.left-side p{
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Right side styling*/
+
+.form .input-wrapper{
+    margin-bottom: 2rem;
+}
+.input-wrapper input{
+    border: none;
+    width: 24.75rem;
+    height: 2.8rem;
+    background:rgba(237, 237, 237, 1);
+}
+
+.input-wrapper label{
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+.input-wrapper button{
+    background: rgba(82, 0, 255, 1);
+    font-size:1rem;
+    color: white;
+    border: none;
+    width: 10.18rem;
+    height: 3.31rem;
+}
+
+/* Small tablet size */
+@media only screen and (max-width: 1260px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    .left-side{
+        text-align: center;
+    }
+    
+    .left-side p{
+        font-size: 1.2rem; 
+    }
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 2rem;
+    }
+    .form input{
+        max-width: 16.75rem;
+        height: 3rem;
+    }
+    .right-side{
+        margin-top: 5rem;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width: 763px) {
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .input-wrapper input{
+        max-width: 60rem;
+        min-height: 3.5rem;
+    }
+    .input-wrapper button{
+        text-align: center;
+        min-width: 25rem;
+        min-height: 3.625rem;
+    }
+}

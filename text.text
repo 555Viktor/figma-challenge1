@@ -1,0 +1,22 @@
+.left-side,
+.right-side{
+    flex: 1;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 20px;
+}
+
+.left-side {
+    flex: 1;
+    background-color: #3498db; /* Choose your left-side color */
+    color: #fff; /* Choose text color for left-side */
+    padding: 20px;
+}
+
+.right-side {
+    flex: 1;
+    background-color: #e74c3c; /* Choose your right-side color */
+    color: #fff; /* Choose text color for right-side */
+    padding: 20px;
+}
